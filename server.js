@@ -24,15 +24,11 @@ app.get('/api/:cep', async (req, res) => {
     res.send(data)
 });
 
-
-app.get('/hello', (req,res) => {
-    res.send('Olá, mundo!');
-});
     
-/* app.post('/firebase/insert/', (req) => {
+app.post('/firebase/insert/', (req) => {
     insert.saveData(req.body, function(err, data){
         res.send(data)
     });
-}) */
+});
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
