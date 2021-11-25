@@ -1,11 +1,12 @@
 const express = require('express');
-const app = express();
 const fetch = require('cross-fetch');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const insert = require('./firebase/insertData')
 
 const port = process.env.PORT || 5000;
+
+const app = express();
 
 app.use(express.json())
 app.use(bodyParser.json());
