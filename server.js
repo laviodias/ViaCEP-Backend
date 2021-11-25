@@ -17,7 +17,7 @@ app.get('/api/:cep', async (req, res) => {
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
 
-const firebase = require('firebase');
+/* const firebase = require('firebase');
 
 const firebaseConfig = {
     apiKey: "AIzaSyCHDEjRnCJqIluIwaLn4YuCCwaj4hQ9nio",
@@ -45,4 +45,4 @@ app.post('/firebase/insert/:result', (req, res) => {
     .catch(error => {
         res.send(error)
     })
-})
+}) */
