@@ -4,14 +4,14 @@ module.exports = {
     saveData: function (req, callback){
         const db = firebase.database();
 
-        db.ref(`${req.result.cep}`).set({
-            cep: req.result.cep,
-            localidade: req.result.localidade,
-            logradouro: req.result.logradouro,
-            bairro: req.result.bairro,
-            uf: req.result.uf,
-            complemento: req.result.complemento,
-            ddd: req.result.ddd,
+        db.ref(`${req.cep}`).set({
+            cep: req.cep,
+            localidade: req.localidade,
+            logradouro: req.logradouro,
+            bairro: req.bairro,
+            uf: req.uf,
+            complemento: req.complemento,
+            ddd: req.ddd,
         })
         callback(null, {"statuscode": 200, "message": "Data inserted successfully"});
     }
