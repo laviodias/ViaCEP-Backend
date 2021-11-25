@@ -23,9 +23,8 @@ app.get('/api/:cep', async (req, res) => {
     const data = await response.json()
     res.send(data)
 });
-
     
-app.post('/firebase/insert/', (req) => {
+app.post('/firebase/insert/', (req, res) => {
     insert.saveData(req.body, function(err, data){
         res.send(data)
     });
