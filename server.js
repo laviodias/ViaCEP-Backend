@@ -14,10 +14,6 @@ app.use((req, res, next) => {
     next();
 });
 
-<<<<<<< HEAD
-=======
-app.use(express.json())
->>>>>>> e51c1b6d8f543ad0ea7d992886dd6a061bd13d9e
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
