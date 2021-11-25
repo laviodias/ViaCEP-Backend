@@ -7,18 +7,17 @@ const insert = require('./firebase/insertData')
 const port = process.env.PORT || 5000;
 
 const app = express();
+app.use(cors());
 
 app.use(express.json())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use((req, res, next) => {
+/* app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    res.header("Access-Control-Allow-Methods", "GET, POST");
     app.use(cors());
     next();
-});
+});*/
 
 app.get('/api/:cep', async (req, res) => {
     fetch(`https://viacep.com.br/ws/${req.params.cep}/json/`)
@@ -26,8 +25,8 @@ app.get('/api/:cep', async (req, res) => {
     .then(data => res.send(data))
 });
 
-app.post('/firebase/insert/', (req) => {
+/* app.post('/firebase/insert/', (req) => {
     insert.saveData(req.body, function(err, data){
         res.send(data)
     });
-})
+}) */
