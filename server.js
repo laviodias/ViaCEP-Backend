@@ -34,3 +34,5 @@ app.get('/hello', (req,res) => {
         res.send(data)
     });
 }) */
+
+app.listen(port, () => console.log(`Listening on port ${port}`));
