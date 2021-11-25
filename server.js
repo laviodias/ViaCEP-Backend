@@ -27,10 +27,10 @@ app.get('/api/:cep', async (req, res) => {
     console.log('called')
 });
 
-app.post('/firebase/insert/', (req) => {
+/* app.post('/firebase/insert/', (req) => {
     insert.saveData(req.body, function(err, data){
         res.send(data)
     });
-})
+}) */
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
