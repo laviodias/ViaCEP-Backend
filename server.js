@@ -24,7 +24,15 @@ app.get('/api/:cep', async (req, res) => {
 });
 
 app.post('/firebase/insert/', (req, res) => {
-    ofirebase.saveData(req.body, function(err, data){
+    ofirebase.saveData({
+        cep: req.body.cep,
+        localidade: req.body.localidade,
+        logradouro: req.body.logradouro,
+        bairro: req.body.bairro,
+        uf: req.body.uf,
+        complemento: req.body.complemento,
+        ddd: req.body.ddd,
+    }, function(err, data){
         res.send(data);
     });
 });
