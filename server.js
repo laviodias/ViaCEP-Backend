@@ -26,7 +26,7 @@ app.get('/api/:cep', async (req, res) => {
 
 
 app.get('/hello', (req,res) => {
-    res.send('Olá, mundo!);
+    res.send('Olá, mundo!');
 });
     
 /* app.post('/firebase/insert/', (req) => {
