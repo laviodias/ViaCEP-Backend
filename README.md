@@ -26,6 +26,7 @@ Caso deseje rodar o servidor em sua máquina, siga os seguintes passos:
 - Clone o repositório: `https://github.com/laviodias/ViaCEP-Backend.git`
 - Instale as dependências do projeto: `yarn` ou `npm install`
 - Rode o servidor: `yarn dev` ou `npm run dev`
+- O servidor irá rodar no `http://localhost:5000/`
 
 Caso deseje visualizar o site no ar acesse: https://lavio-viacep.netlify.app/
 
