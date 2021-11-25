@@ -16,6 +16,10 @@ app.use((req, res, next) => {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get('/', (req, res) => {
+    res.send('Para acessar a API, adicione /api/ e o número do CEP que deseja consultar ao final da url')
+});
+
 app.get('/api/:cep', async (req, res) => {
     const response = await fetch(`https://viacep.com.br/ws/${req.params.cep}/json/`)
     const data = await response.json()
